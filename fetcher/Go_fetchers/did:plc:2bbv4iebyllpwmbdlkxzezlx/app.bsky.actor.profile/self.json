@@ -1,0 +1,14 @@
+{
+  "$type": "app.bsky.actor.profile",
+  "avatar": {
+    "$type": "blob",
+    "ref": {
+      "$link": "bafkreiawyrencoi3mzrftqzadc5e3twjthe75zfed7v4cp5ca5fdsbrrde"
+    },
+    "mimeType": "image/jpeg",
+    "size": 315520
+  },
+  "createdAt": "2025-04-15T14:54:33.884Z",
+  "description": "🧐blue sky真好玩",
+  "displayName": "橙子味的绵羊"
+}
