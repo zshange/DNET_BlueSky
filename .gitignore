@@ -4,11 +4,12 @@
 # 然后只包含你想要的文件夹，例如只包含 BS 文件夹
 !scripts/
 !fetcher/
-
+!downloader/
 # 排除 BS 文件夹中的特定内容（如果需要）
-fetcher/**/*.mod
+fetcher/**/*.sum
 fetcher/logs/
 fetcher/*.pyc
+downloader/**/*.sum
 
 # 确保 .gitignore 文件本身不被排除
 !.gitignore 
