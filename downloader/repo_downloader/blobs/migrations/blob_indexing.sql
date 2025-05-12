@@ -5,11 +5,13 @@ ALTER TABLE repos
 
 -- Create media_blobs table if it doesn't exist
 CREATE TABLE IF NOT EXISTS media_blobs (
-  did BIGSERIAL PRIMARY KEY REFERENCES repos(did),
-  blob_cid TEXT NOT NULL,
+  did TEXT NOT NULL  REFERENCES repos(did),
+  blob_cid TEXT NOT NULL PRIMARY KEY,
   mime_type TEXT,
   created_at TIMESTAMP NOT NULL,
-  CONSTRAINT blobs_cid_unique UNIQUE (blob_cid)
+  CONSTRAINT blobs_cid_unique UNIQUE (blob_cid),
+  size BIGINT,
+  type TEXT DEFAULT 'default'
 );
 
 -- Add indexes

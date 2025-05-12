@@ -4,7 +4,7 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"log"
+	// "log"
 	"os"
 	"os/signal"
 	"syscall"
@@ -13,14 +13,16 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/jackc/pgx/v5/stdlib"
 	_ "github.com/joho/godotenv/autoload"
-	"github.com/kelseyhightower/envconfig"
+	"github.com/joho/godotenv"
+	// "github.com/kelseyhightower/envconfig"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/rs/zerolog"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 	"net/http"
-
+	
+	// "DNET_BlueSky/downloader/repo_downloader/blobs/blob_downloader"
 	"DNET_BlueSky/downloader/repo_downloader/blobs/repo"
 	"github.com/uabluerail/indexer/util/gormzerolog"
 )
@@ -34,24 +36,41 @@ type Config struct {
 	DBUrl       string   `default:"postgresql://postgres:DNET_ZQJ@postgres:5432/bluesky?sslmode=disable"`
 	Workers     int    `default:"3"`
 	ContactInfo string `split_words:"true"`
+	
 }
 
 var config Config
 
 func main() {
+	godotenv.Load(".env") // 加载.env文件
+    host := os.Getenv("DB_HOST")
+    port := os.Getenv("DB_PORT")
+    user := os.Getenv("DB_USER")
+    password := os.Getenv("DB_PASSWORD")
+    dbname := os.Getenv("DB_NAME")
+    // 构建连接字符串
+    dsn := fmt.Sprintf("postgresql://%s:%s@%s:%s/%s?sslmode=disable",
+        user, password, host, port, dbname)
+	config.DBUrl = dsn
+	config.ContactInfo = "shange0403@gmail.com"
+	
+
 	flag.StringVar(&config.LogFile, "log", "", "Path to the log file. If empty, will log to stderr")
 	flag.StringVar(&config.LogFormat, "log-format", "text", "Logging format. 'text' or 'json'")
 	flag.Int64Var(&config.LogLevel, "log-level", 1, "Log level. -1 - trace, 0 - debug, 1 - info, 5 - panic")
 	flag.IntVar(&config.Workers, "workers", 3, "Number of blob download workers")
 
-	if err := envconfig.Process("indexer", &config); err != nil {
-		log.Fatalf("envconfig.Process: %s", err)
-	}
+	// if err := envconfig.Process("indexer", &config); err != nil {
+	// 	log.Fatalf("envconfig.Process: %s", err)
+	// }
 
 	flag.Parse()
-
-	ctx, cancel := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
+	baseCtx, cancel := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
 	defer cancel()
+	ctx, timeoutCancel := context.WithTimeout(baseCtx, 80*time.Second)
+	defer timeoutCancel()
+	// ctx, cancel := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
+	// defer cancel()
 
 	if err := runMain(ctx); err != nil {
 		fmt.Fprintln(os.Stderr, err)
@@ -60,7 +79,9 @@ func main() {
 }
 
 func runMain(ctx context.Context) error {
+	
 	ctx = setupLogging(ctx)
+
 	log := zerolog.Ctx(ctx)
 	log.Debug().Msgf("Starting blob indexer...")
 
@@ -69,6 +90,7 @@ func runMain(ctx context.Context) error {
 	}
 
 	// Connect to database
+	fmt.Println(config.DBUrl)
 	dbCfg, err := pgxpool.ParseConfig(config.DBUrl)
 	if err != nil {
 		return fmt.Errorf("parsing DB URL: %w", err)
@@ -176,7 +198,7 @@ func processRepos(ctx context.Context, db *gorm.DB, blobPool *BlobWorkerPool) {
 				// Create a copy to avoid issues with loop variable capture
 				repo1 := r
 				
-				// Process each repo for blobs
+				// 找到每一个仓库中对应的blobs数据
 				if err := FetchRepoBlobs(repoCtx, blobPool, &repo1); err != nil {
 					log.Error().Err(err).Str("did", repo1.DID).Msg("Failed to fetch blobs for repo")
 					
@@ -196,6 +218,7 @@ func processRepos(ctx context.Context, db *gorm.DB, blobPool *BlobWorkerPool) {
 							"last_blob_error": nil,
 						})
 				}
+				
 			}
 		}
 	}

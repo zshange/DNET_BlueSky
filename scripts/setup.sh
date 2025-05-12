@@ -15,18 +15,20 @@ conda init
 source ~/.bashrc
 
 
-echo "脚本执行完毕!"
+# 通过 conda 安装 Go 环境
+echo "安装 Go 环境..."
+conda install -c conda-forge go -y
+
+# 验证 Go 安装
+echo "验证 Go 安装..."
+go version
 
 
-# 安装 MongoDB 工具和 MongoDB 服务
-echo "安装 MongoDB 工具和 MongoDB 服务..."
-sudo dpkg -i ~/BlueSky/script/Code4Livefeeds/mongodb-database-tools-ubuntu2004-x86_64-100.10.0.deb
-sudo dpkg -i ~/BlueSky/script/Code4Livefeeds/mongodb-mongosh_2.3.2_amd64.deb
-sudo dpkg -i ~/BlueSky/script/Code4Livefeeds/mongodb-org-server_5.0.30_amd64.deb
+
 
 # 创建目录 /mydata
 echo "创建目录 /mydata..."
-suo mkdir -p /mydata
+sudo mkdir -p /mydata
 
 # 执行 mkextrafs.pl 脚本
 echo "执行 mkextrafs.pl 脚本..."
@@ -58,7 +60,7 @@ echo \
 
 # 安装指定版本的 Docker Engine
 sudo apt-get update
-sudo apt-get install -y docker-ce=5:28.1.1~3-0~ubuntu-$(lsb_release -cs) docker-ce-cli=5:28.1.1~3-0~ubuntu-$(lsb_release -cs) containerd.io
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
 # 安装指定版本的 Docker Compose
 sudo curl -L "https://github.com/docker/compose/releases/download/v2.35.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -68,5 +70,3 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker --version
 docker-compose --version
 
-# 链接到github仓库
-git remote add origin https://github.com/zshange/DNET_BlueSky.git

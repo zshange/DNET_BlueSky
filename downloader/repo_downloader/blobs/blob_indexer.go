@@ -18,7 +18,7 @@ import (
 	"gorm.io/gorm/clause"
 
 	"github.com/uabluerail/bsky-tools/xrpcauth"
-	"github.com/uabluerail/indexer/models"
+	// "github.com/uabluerail/indexer/models"
 	"DNET_BlueSky/downloader/repo_downloader/blobs/repo"
 	"DNET_BlueSky/downloader/repo_downloader/blobs/resolver"
 )
@@ -31,15 +31,14 @@ const (
 
 // BlobRecord represents a blob in the database
 type BlobRecord struct {
-	ID        models.ID `gorm:"primaryKey"`
-	Repo      models.ID
-	CID       string `gorm:"index"`
-	Path      string
-	Size      int64
-	MimeType  string
-	CreatedAt time.Time
-	UpdatedAt time.Time
+	UpdatedAt time.Time `gorm:"column:updated_at"`
+	DID       string    `gorm:"column:did;not null"`
+	BlobCID   string    `gorm:"column:blob_cid;primaryKey"`
+	Size      int64     `gorm:"column:size"`
+	MimeType  string    `gorm:"column:mime_type"`
+	CreatedAt time.Time `gorm:"column:created_at"`
 }
+
 
 // TableName sets the table name for BlobRecord
 func (BlobRecord) TableName() string {
@@ -197,7 +196,7 @@ func (p *BlobWorkerPool) processBlob(ctx context.Context, work BlobWorkItem) err
 	
 	// Check if blob already exists in DB
 	var count int64
-	if err := p.db.Model(&BlobRecord{}).Where("cid = ?", work.CID).Count(&count).Error; err != nil {
+	if err := p.db.Model(&BlobRecord{}).Where("blob_cid = ?", work.CID).Count(&count).Error; err != nil {
 		return fmt.Errorf("error checking blob existence: %w", err)
 	}
 	
@@ -225,7 +224,7 @@ func (p *BlobWorkerPool) processBlob(ctx context.Context, work BlobWorkItem) err
 	userAgent := fmt.Sprintf("Go-http-client/1.1 indexerbot/0.1 (based on github.com/uabluerail/indexer; %s)", p.contactInfo)
 	client.UserAgent = &userAgent
 	
-	// Download blob
+	// TODO 修改下载Blob的方法
 	startTime := time.Now()
 	blobBytes, err := comatproto.SyncGetBlob(ctx, client, work.CID, work.Repo.DID)
 	downloadDuration := time.Since(startTime)
@@ -239,7 +238,7 @@ func (p *BlobWorkerPool) processBlob(ctx context.Context, work BlobWorkItem) err
 	blobDownloadTime.Observe(downloadDuration.Seconds())
 	blobSize.Observe(float64(len(blobBytes)))
 	
-	// Create directory structure based on CID
+	// TODO 设计CID的存储路径
 	blobDir := filepath.Join(blobStoragePath, work.CID[:2], work.CID[2:4])
 	if err := os.MkdirAll(blobDir, 0755); err != nil {
 		return fmt.Errorf("failed to create blob directory: %w", err)
@@ -251,7 +250,7 @@ func (p *BlobWorkerPool) processBlob(ctx context.Context, work BlobWorkItem) err
 		return fmt.Errorf("failed to write blob to disk: %w", err)
 	}
 	
-	// Determine MIME type (in a real implementation, use http.DetectContentType or similar)
+	// TODO 需要根据blob的类型，确定mime_type
 	mimeType := "application/octet-stream"
 	if len(blobBytes) > 512 {
 		mimeType = http.DetectContentType(blobBytes[:512])
@@ -260,17 +259,18 @@ func (p *BlobWorkerPool) processBlob(ctx context.Context, work BlobWorkItem) err
 	}
 	
 	// Save to database
+
 	blobRecord := BlobRecord{
-		Repo:      models.ID(work.Repo.ID),
-		CID:       work.CID,
-		Path:      blobPath,
+		DID:      work.Repo.DID,
+		BlobCID:       work.CID,
 		Size:      int64(len(blobBytes)),
 		MimeType:  mimeType,
 		CreatedAt: time.Now(),
 	}
-	
+	// TODO 此处有报错，DID存储失败
+	// fmt.Println(blobRecord.DID)
 	result := p.db.Clauses(clause.OnConflict{
-		Columns:   []clause.Column{{Name: "cid"}},
+		Columns:   []clause.Column{{Name: "blob_cid"}},
 		DoNothing: true,
 	}).Create(&blobRecord)
 	
@@ -298,6 +298,7 @@ func FetchRepoBlobs(ctx context.Context, workerPool *BlobWorkerPool, repo *repo.
 	
 	// Get PDS endpoint
 	u, _, err := resolver.GetPDSEndpointAndPublicKey(ctx, repo.DID)
+
 	if err != nil {
 		return fmt.Errorf("failed to resolve PDS endpoint: %w", err)
 	}
@@ -326,6 +327,7 @@ func FetchRepoBlobs(ctx context.Context, workerPool *BlobWorkerPool, repo *repo.
 		
 		// Queue each blob for processing
 		for _, cidStr := range resp.Cids {
+			fmt.Println(cidStr)
 			workerPool.QueueBlob(repo, cidStr)
 		}
 		

@@ -1,0 +1,183 @@
+services:
+  postgres:
+    image: "postgres:16"
+    volumes:
+      - "${DATA_DIR:?specify data dir in .env file}/postgres:/var/lib/postgresql/data:rw"
+    restart: always
+    healthcheck:
+      test: pg_isready -h localhost -U postgres
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 1h
+      # start_interval: 3s
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      POSTGRES_DB: bluesky
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?specify password in .env file}"
+    command: [
+      "-c", "max_connections=1000",
+      "-c", "max_parallel_workers_per_gather=8",
+      ]
+    shm_size: '1gb'
+    stop_grace_period: 24h
+
+  scylladb:
+    image: scylladb/scylla
+    command: --memory ${SCYLLADB_RAM:-16G} --smp ${SCYLLADB_CPUS:-6} --overprovisioned 1 --prometheus-address 0.0.0.0
+    volumes:
+      - "${DATA_DIR}/scylla:/var/lib/scylla"
+    ports:
+      - "${METRICS_ADDR:-0.0.0.0}:9180:9180"  # metrics for prometheus
+    stop_grace_period: 24h
+
+  update-db-schema:
+    build:
+      context: .
+      dockerfile: cmd/update-db-schema/Dockerfile
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: on-failure
+    image: ${IMAGE_NAME_PREFIX:-uabluerail}/update-db-schema
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      UPDATE-DB-SCHEMA_POSTGRES_URL: "postgres://postgres:${POSTGRES_PASSWORD}@postgres/bluesky?sslmode=disable"
+      UPDATE-DB-SCHEMA_SCYLLADB_ADDR: scylladb
+    command: [ "--log-level=0" ]
+
+  lister:
+    build:
+      context: .
+      dockerfile: cmd/lister/Dockerfile
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: always
+    image: ${IMAGE_NAME_PREFIX:-uabluerail}/repo-lister
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+    depends_on:
+      postgres:
+        condition: service_healthy
+      update-db-schema:
+        condition: service_completed_successfully
+    environment:
+      LISTER_METRICS_PORT: '8080'
+      LISTER_POSTGRES_URL: "postgres://postgres:${POSTGRES_PASSWORD}@postgres/bluesky?sslmode=disable"
+      ATP_PLC_ADDR: "${ATP_PLC_ADDR:-https://plc.directory}"
+      LISTER_SCYLLADB_ADDR: scylladb
+      LISTER_CONTACT_INFO: "${CONTACT_INFO:?specify your contact info in .env file}"
+    ports:
+      - "${METRICS_ADDR:-0.0.0.0}:11001:8080"
+    command: [ "--log-level=0" ]
+
+  consumer:
+    build:
+      context: .
+      dockerfile: cmd/consumer/Dockerfile
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: always
+    image: ${IMAGE_NAME_PREFIX:-uabluerail}/firehose-consumer
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+    depends_on:
+      postgres:
+        condition: service_healthy
+      update-db-schema:
+        condition: service_completed_successfully
+    environment:
+      CONSUMER_METRICS_PORT: '8080'
+      CONSUMER_POSTGRES_URL: "postgres://postgres:${POSTGRES_PASSWORD}@postgres/bluesky?sslmode=disable"
+      ATP_PLC_ADDR: "${ATP_PLC_ADDR:-https://plc.directory}"
+      CONSUMER_COLLECTION_BLACKLIST: ${COLLECTION_BLACKLIST:-}
+      CONSUMER_SCYLLADB_ADDR: scylladb
+      CONSUMER_CONTACT_INFO: "${CONTACT_INFO:?specify your contact info in .env file}"
+    ports:
+      - "${METRICS_ADDR:-0.0.0.0}:11002:8080"
+    command: [ "--log-level=0" ]
+
+  pds-discovery:
+    build:
+      context: .
+      dockerfile: cmd/pds-discovery/Dockerfile
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: always
+    image: ${IMAGE_NAME_PREFIX:-uabluerail}/pds-discovery
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+    depends_on:
+      postgres:
+        condition: service_healthy
+      update-db-schema:
+        condition: service_completed_successfully
+    environment:
+      PDS-DISCOVERY_METRICS_PORT: '8080'
+      PDS-DISCOVERY_POSTGRES_URL: "postgres://postgres:${POSTGRES_PASSWORD}@postgres/bluesky?sslmode=disable"
+      PDS-DISCOVERY_JETSTREAM: ${JETSTREAM:-wss://jetstream2.us-east.bsky.network}
+      ATP_PLC_ADDR: "${ATP_PLC_ADDR:-https://plc.directory}"
+    ports:
+      - "${METRICS_ADDR:-0.0.0.0}:11005:8080"
+    command: [ "--log-level=0" ]
+
+  record-indexer:
+    build:
+      context: .
+      dockerfile: cmd/record-indexer/Dockerfile
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: always
+    image: ${IMAGE_NAME_PREFIX:-uabluerail}/record-indexer
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+    depends_on:
+      postgres:
+        condition: service_healthy
+      update-db-schema:
+        condition: service_completed_successfully
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
+    environment:
+      INDEXER_METRICS_PORT: '8080'
+      INDEXER_POSTGRES_URL: "postgres://postgres:${POSTGRES_PASSWORD}@postgres/bluesky?sslmode=disable"
+      INDEXER_WORKERS: 50
+      ATP_PLC_ADDR: "${ATP_PLC_ADDR:-https://plc.directory}"
+      INDEXER_COLLECTION_BLACKLIST: ${COLLECTION_BLACKLIST:-}
+      INDEXER_SCYLLADB_ADDR: scylladb
+      INDEXER_CONTACT_INFO: "${CONTACT_INFO:?specify your contact info in .env file}"
+    ports:
+      - "${METRICS_ADDR:-0.0.0.0}:11003:8080"
+    command: [ "--log-level=0" ]
+
+  query-exporter:
+    image: adonato/query-exporter:latest
+    restart: always
+    environment:
+      POSTGRES_URL: "postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/bluesky?sslmode=disable"
+    volumes:
+      - "./metrics/prometheus/exporters/query-exporter/config.yaml:/config/config.yaml:ro"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "${METRICS_ADDR:-0.0.0.0}:9560:9560"
+    links:
+      - postgres:postgres
+    depends_on:
+      postgres:
+        condition: service_healthy
+      update-db-schema:
+        # Not a strict dependency, but it's better to not have it running
+        # unnecessary queries during a costly migration.
+        condition: service_completed_successfully
