@@ -227,6 +227,7 @@ func (p *BlobWorkerPool) processBlob(ctx context.Context, work BlobWorkItem) err
 	// TODO 修改下载Blob的方法
 	startTime := time.Now()
 	blobBytes, err := comatproto.SyncGetBlob(ctx, client, work.CID, work.Repo.DID)
+	
 	downloadDuration := time.Since(startTime)
 	
 	if err != nil {

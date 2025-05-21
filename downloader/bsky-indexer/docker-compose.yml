@@ -161,6 +161,40 @@ services:
       - "${METRICS_ADDR:-0.0.0.0}:11003:8080"
     command: [ "--log-level=0" ]
 
+
+  filtered-record-indexer:
+    build:
+      context: .
+      dockerfile: cmd/filtered-record-indexer/Dockerfile
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: always
+    image: ${IMAGE_NAME_PREFIX:-uabluerail}/filtered-record-indexer
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+    depends_on:
+      postgres:
+        condition: service_healthy
+      update-db-schema:
+        condition: service_completed_successfully
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
+    environment:
+      INDEXER_METRICS_PORT: '8080'
+      INDEXER_POSTGRES_URL: "postgres://postgres:${POSTGRES_PASSWORD}@postgres/bluesky?sslmode=disable"
+      INDEXER_WORKERS: 50
+      ATP_PLC_ADDR: "${ATP_PLC_ADDR:-https://plc.directory}"
+      INDEXER_COLLECTION_BLACKLIST: ${COLLECTION_BLACKLIST:-}
+      INDEXER_SCYLLADB_ADDR: scylladb
+      INDEXER_CONTACT_INFO: "${CONTACT_INFO:?specify your contact info in .env file}"
+    ports:
+      - "${METRICS_ADDR:-0.0.0.0}:11003:8080"
+    command: [ "--log-level=0" ]
+
+
   query-exporter:
     image: adonato/query-exporter:latest
     restart: always

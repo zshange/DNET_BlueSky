@@ -16,7 +16,7 @@ import (
 	"strings"
 	"syscall"
 	"time"
-	
+
 	"github.com/gocql/gocql"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/jackc/pgx/v5/stdlib"
@@ -28,7 +28,7 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
-
+	
 	"github.com/uabluerail/indexer/util/gormzerolog"
 )
 
@@ -45,6 +45,7 @@ type Config struct {
 }
 
 var config Config
+
 
 func runMain(ctx context.Context) error {
 	ctx = setupLogging(ctx)

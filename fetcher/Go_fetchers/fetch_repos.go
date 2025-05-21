@@ -14,6 +14,7 @@ import (
     "strings"
     _"github.com/bluesky-social/indigo/api/bsky" // 注册 Bluesky 的记录类型
     // "github.com/bluesky-social/indigo/atproto/data" // 用于类型无关的数据处理
+	// "github.com/bluesky-social/indigo/automod"
     )
 func main() {
     if err := get_repos("shange.bsky.social"); err != nil {
@@ -22,6 +23,53 @@ func main() {
         // 处理所有 .car 文件
         processAllCarFiles("../../repo_files")
     }
+    if err := fetch_metadata("shange.bsky.social"); err != nil {
+        fmt.Println("Error:", err)
+    } else {
+        // 处理所有 .car 文件
+        // processAllCarFiles("../../repo_files")
+    }
+}
+
+func fetch_metadata(target_atid string) error {
+    ctx := context.Background()
+
+    // 替换为你想查询的标识符，比如 ""
+    atid, err := syntax.ParseAtIdentifier(target_atid)
+    if err != nil {
+        return err
+    }
+
+    dir := identity.DefaultDirectory()
+    ident, err := dir.Lookup(ctx, *atid)
+    if err != nil {
+        return err
+    }
+
+    if ident.PDSEndpoint() == "" {
+        return fmt.Errorf("no PDS endpoint for identity")
+    }
+
+    fmt.Println("PDS Endpoint:", ident.PDSEndpoint())
+
+    // // 获取用户信息，将文件存储在repo_files目录下
+    storageDir := "../../repo_files"
+    if err := os.MkdirAll(storageDir, 0755); err != nil {
+        return fmt.Errorf("failed to create storage directory: %v", err)
+    }
+
+    
+    // carPath := filepath.Join(storageDir, ident.DID.String() + ".car")
+
+    xrpcc := xrpc.Client{
+        Host: ident.PDSEndpoint(),
+    }
+    info,err := comatproto.AdminGetAccountInfo(ctx, &xrpcc, ident.DID.String())
+    if err != nil {
+        return err
+    }
+    fmt.Println(info)
+    return nil
 }
 
 // 处理目录中所有的 .car 文件

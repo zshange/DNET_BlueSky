@@ -23,6 +23,31 @@ down:
 
 start-db: .env
 	@docker compose up -d postgres
+start-scylladb: .env
+	@docker compose up -d scylladb
+
+start-lister: .env
+	@docker compose up -d lister
+
+start-consumer: .env
+	@docker compose up -d consumer
+
+start-pds-discovery: .env
+	@docker compose up -d pds-discovery
+
+start-record-indexer: .env
+	@docker compose up -d record-indexer
+
+start-update-db-schema: .env
+	@docker compose up -d update-db-schema
+
+start-query-exporter: .env
+	@docker compose up -d query-exporter
+
+start-filtered-record-indexer: .env
+	@docker compose up -d filtered-record-indexer
+
+
 
 status:
 	@docker compose stats
