@@ -27,6 +27,7 @@ import (
 
 	"github.com/uabluerail/indexer/pds"
 	"github.com/uabluerail/indexer/repo"
+	// "github.com/uabluerail/indexer/cmd/filtered-record-indexer/repo"
 	"github.com/uabluerail/indexer/util/gormzerolog"
 )
 

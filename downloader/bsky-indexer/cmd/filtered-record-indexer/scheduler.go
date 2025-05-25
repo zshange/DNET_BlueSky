@@ -122,14 +122,14 @@ func (s *Scheduler) fillQueue(ctx context.Context) error {
 
 	counts := []pdsCounts{}
 	err := s.db.Raw(`select * from (
-	  SELECT pds, count(*) FROM "repos" left join "pds" on repos.pds = pds.id WHERE
+	  SELECT pds, count(*) FROM "filtered_repos" left join "pds" on filtered_repos.pds = pds.id WHERE
 	    (
 	      (last_indexed_rev is null OR last_indexed_rev = '') OR
 	      (first_rev_since_reset is not null AND first_rev_since_reset <> ''
 	        AND last_indexed_rev < first_rev_since_reset)
 	      OR
-	      ("repos".first_cursor_since_reset is not null AND "repos".first_cursor_since_reset <> 0
-	        AND "repos".first_cursor_since_reset < "pds".first_cursor_since_reset)
+	      ("filtered_repos".first_cursor_since_reset is not null AND "filtered_repos".first_cursor_since_reset <> 0
+	        AND "filtered_repos".first_cursor_since_reset < "pds".first_cursor_since_reset)
 	    )
 	  AND failed_attempts < 3
 	  AND (not pds.disabled OR pds.disabled is null)
@@ -155,7 +155,7 @@ func (s *Scheduler) fillQueue(ctx context.Context) error {
 			ids = append(ids, c.PDS)
 		}
 
-		err := s.db.Raw(`SELECT repos.* FROM repos left join pds on repos.pds = pds.id WHERE pds IN ?
+		err := s.db.Raw(`SELECT filtered_repos.* FROM filtered_repos left join pds on filtered_repos.pds = pds.id WHERE pds IN ?
 			AND
 				(
 					(last_indexed_rev is null OR last_indexed_rev = '')
@@ -163,8 +163,8 @@ func (s *Scheduler) fillQueue(ctx context.Context) error {
 					(first_rev_since_reset is not null AND first_rev_since_reset <> ''
 						AND last_indexed_rev < first_rev_since_reset)
 					OR
-					(repos.first_cursor_since_reset is not null AND repos.first_cursor_since_reset <> 0
-						AND repos.first_cursor_since_reset < pds.first_cursor_since_reset)
+					(filtered_repos.first_cursor_since_reset is not null AND filtered_repos.first_cursor_since_reset <> 0
+						AND filtered_repos.first_cursor_since_reset < pds.first_cursor_since_reset)
 				)
 			AND failed_attempts < ? LIMIT ?`,
 			ids, maxAttempts, perBatchLimit).

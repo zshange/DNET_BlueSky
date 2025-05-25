@@ -177,8 +177,8 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-      update-db-schema:
-        condition: service_completed_successfully
+      # update-db-schema:
+      #   condition: service_completed_successfully
     dns:
       - 1.1.1.1
       - 8.8.8.8
@@ -211,7 +211,7 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-      update-db-schema:
-        # Not a strict dependency, but it's better to not have it running
-        # unnecessary queries during a costly migration.
-        condition: service_completed_successfully
+      # update-db-schema:
+      #   # Not a strict dependency, but it's better to not have it running
+      #   # unnecessary queries during a costly migration.
+        # condition: service_completed_successfully

@@ -56,6 +56,8 @@ type FilteredRepo struct {
 	FlDid        string    `gorm:"column:did"`
 	FetchedAt  time.Time	 `gorm:"column:fetched_at"`
 	PDS        int64   `gorm:"column:pds"`
+	FirstCursorSinceReset int64 `gorm:"default:0"`  // 添加默认值
+
 }
 func (FilteredRepo) TableName() string {
     return "filtered_repos"
@@ -101,7 +103,7 @@ func runMain(ctx context.Context) error {
 	// 检查 filtered_repos 表中已有的记录数
 	var existingCount int64
 	db.Model(&FilteredRepo{}).Count(&existingCount)
-	if existingCount >= 10000 {
+	if existingCount >= 100000 {
 		log.Info().Msgf("filtered_repos already has %d records, exiting.", existingCount)
 		return nil
 	}
@@ -156,7 +158,7 @@ func queryAndEnqueue(ctx context.Context, db *gorm.DB, workCh chan<- string) {
 	// 先查 filtered_repos 表已有多少条
 	var existingCount int64
 	db.Model(&FilteredRepo{}).Count(&existingCount)
-	if existingCount >= 10000 {
+	if existingCount >= 100000 {
 		log.Info().Msgf("filtered_repos already has %d records, skipping enqueue.", existingCount)
 		return
 	}
@@ -164,7 +166,7 @@ func queryAndEnqueue(ctx context.Context, db *gorm.DB, workCh chan<- string) {
 	var repos []repo.Repo
 	query := db.Model(&repo.Repo{})
 	// 随机抽取 10,000 个 DID
-	err := query.Order("RANDOM()").Limit(10000-int(existingCount)).Find(&repos).Error
+	err := query.Order("RANDOM()").Limit(100000-int(existingCount)).Find(&repos).Error
 	if err != nil {
 		log.Error().Err(err).Msg("Error querying repos")
 		return
@@ -198,7 +200,7 @@ func worker(ctx context.Context, db *gorm.DB, workCh <-chan string, workerID int
 			// 检查 filtered_repos 表中记录数，超过10000则直接退出
 			var currentCount int64
 			db.Model(&FilteredRepo{}).Count(&currentCount)
-			if currentCount >= 10000 {
+			if currentCount >= 100000 {
 				log.Info().Msgf("filtered_repos reached %d records, worker exiting.", currentCount)
 				os.Exit(0)
 			}

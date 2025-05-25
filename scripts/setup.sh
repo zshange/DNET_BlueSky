@@ -70,3 +70,5 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker --version
 docker-compose --version
 
+
+# 一些注意点：小心缓存的docker镜像，修改服务后记得刷新一下镜像再构建
