@@ -44,8 +44,8 @@ start-update-db-schema: .env
 start-query-exporter: .env
 	@docker compose up -d query-exporter
 
-start-filtered-record-indexer: .env
-	@docker compose up -d filtered-record-indexer
+# start-filtered-record-indexer: .env
+# 	@docker compose up -d filtered-record-indexer
 
 
 

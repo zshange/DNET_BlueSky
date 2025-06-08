@@ -358,11 +358,8 @@ func (d *RecordDownloader) printProgress() {
 
 func main() {
     
-    cluster := gocql.NewCluster("172.18.0.3")
-    cluster.Keyspace = "bluesky"
-    cluster.Consistency = gocql.Quorum
-    cluster.Timeout = time.Second * 30
-	cluster.Port = 9042
+    var contactInfo = "shange0403@gmail.com"
+
 
     
     session, err := gocqlx.WrapSession(cluster.CreateSession())
@@ -371,7 +368,7 @@ func main() {
     }
     defer session.Close()
 
-    
+
     downloader := NewRecordDownloader(&session, "/mydata/mmrecord")
     
     

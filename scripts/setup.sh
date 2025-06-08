@@ -25,7 +25,6 @@ go version
 
 
 
-
 # 创建目录 /mydata
 echo "创建目录 /mydata..."
 sudo mkdir -p /mydata
@@ -33,6 +32,10 @@ sudo mkdir -p /mydata
 # 执行 mkextrafs.pl 脚本
 echo "执行 mkextrafs.pl 脚本..."
 sudo /usr/local/etc/emulab/mkextrafs.pl /mydata
+
+sudo mkdir -p /mydata/csv
+sudo mkdir -p /mydata/records
+sudo chmod -R 777 /mydata
 
 # 安装docker和docker-compose
 # Docker version 28.1.1, build 4eba377
@@ -71,4 +74,14 @@ docker --version
 docker-compose --version
 
 
-# 一些注意点：小心缓存的docker镜像，修改服务后记得刷新一下镜像再构建
+# 一些注意点：缓存的docker镜像，修改服务后记得刷新一下镜像再构建
+# postgres命令
+# psql -U postgres -d bluesky
+# 查看表大小
+# SELECT relname AS table_name, n_live_tup AS row_estimate FROM pg_stat_user_tables ORDER BY row_estimate DESC;
+# 删除表
+# DROP TABLE IF EXISTS <table_name>;
+
+# scylldb
+# 估算数据条数:
+# nodetool cfstats bluesky.records
