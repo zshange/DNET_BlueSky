@@ -1,0 +1,1076 @@
+{
+  "app.bsky.actor.profile/self": {
+    "$type": "app.bsky.actor.profile",
+    "avatar": {
+      "$type": "blob",
+      "ref": {
+        "$link": "bafkreifsuy5de4napploqqimdg3ngwka2mg2wbo6bffq4naeo6ir55fmva"
+      },
+      "mimeType": "image/jpeg",
+      "size": 554646
+    },
+    "banner": {
+      "$type": "blob",
+      "ref": {
+        "$link": "bafkreigh2kfywkhv2l46rgcxru7vi33czlc37ecc7p5helyuynz6gqfary"
+      },
+      "mimeType": "image/jpeg",
+      "size": 934573
+    },
+    "createdAt": "2024-09-03T10:05:18.857Z",
+    "description": "Nyan Nyan:3 Ruida Nyan\u003e\u003c",
+    "displayName": "╶⃝⃤☆~🫂🗝THATHA(≧∇≦)/~☆ ³⁶⁹"
+  },
+  "app.bsky.feed.like/3l3aktfdwot2e": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-03T10:05:36.442Z",
+    "subject": {
+      "cid": "bafyreiddr4pub25m24d4qskgyhcglnre2nuxdv4vlgydnsxm6zdszzsgj4",
+      "uri": "at://did:plc:frh475pn225hbuckb4ymohti/app.bsky.feed.post/3l36pisjq3x2d"
+    }
+  },
+  "app.bsky.feed.like/3l3aktiakey2j": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-03T10:05:39.481Z",
+    "subject": {
+      "cid": "bafyreic5bovge2i4rgxihzakljglbhfs3odymdma3huq5uxc5juuli3c6e",
+      "uri": "at://did:plc:wsgit6nwr73f73uewt46tb7q/app.bsky.feed.post/3l33rlmupms2v"
+    }
+  },
+  "app.bsky.feed.like/3l3aku24qh425": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-03T10:05:57.958Z",
+    "subject": {
+      "cid": "bafyreicih5johol4l6sts3in4qwr5ek7nbg6u3nbbbnrfyqn4zuncly2wa",
+      "uri": "at://did:plc:nm4noz6ecka6gkm3sraavrtn/app.bsky.feed.post/3l37o6weabq27"
+    }
+  },
+  "app.bsky.feed.like/3l3aku6caxw2d": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-03T10:06:02.606Z",
+    "subject": {
+      "cid": "bafyreie4sl2s6j57mybyzb66pywfectcniev5ccdf7qqrztxkcso2jrfpe",
+      "uri": "at://did:plc:ngxch5o7xz6ylrzcvsmi4fwl/app.bsky.feed.post/3l376dzvg2u2e"
+    }
+  },
+  "app.bsky.feed.like/3l3akujpf552q": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-03T10:06:14.564Z",
+    "subject": {
+      "cid": "bafyreifjfobijxn4vtvfjv4r2whb3utmsajoa5u57jgpz66ordtjptr6xy",
+      "uri": "at://did:plc:t76m7guj3oxuwpyygn4zjoyt/app.bsky.feed.post/3l36sc6infu24"
+    }
+  },
+  "app.bsky.feed.like/3l3akvxy56a2a": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-03T10:07:03.102Z",
+    "subject": {
+      "cid": "bafyreigpt6yhhddc4bdxnr4kosknlwtfuuzu2uovuhhcxporbig3syuhlm",
+      "uri": "at://did:plc:27mxglnkpdjlmag7su2dicyl/app.bsky.feed.post/3l36fllw42q2l"
+    }
+  },
+  "app.bsky.feed.like/3l3akwiarp52e": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-03T10:07:20.155Z",
+    "subject": {
+      "cid": "bafyreiakeydxrmzeepzlkt4d4yjevacimhjk2qmmb3u3li4dvjrre7crvi",
+      "uri": "at://did:plc:jbztakir3gep2wgynlgwprmi/app.bsky.feed.post/3l34zinrx632f"
+    }
+  },
+  "app.bsky.feed.like/3l3akwpeecl2e": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-03T10:07:27.608Z",
+    "subject": {
+      "cid": "bafyreibmc43xijmeyafidmjqp6tv5d32udvupgsm53w6jwfh7orepzrwdq",
+      "uri": "at://did:plc:saba5kbyrmikixjhbjfcgl6s/app.bsky.feed.post/3l36pp76rol23"
+    }
+  },
+  "app.bsky.feed.like/3l3b53calj52p": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-03T15:32:11.244Z",
+    "subject": {
+      "cid": "bafyreib2chpaasyuxjwjvnws3x272sebptna5wpyogb6ie7rvtnk5fc4x4",
+      "uri": "at://did:plc:lkwflfx3p2oolqhnlssxrp6z/app.bsky.feed.post/3l366n3ibnx22"
+    }
+  },
+  "app.bsky.feed.like/3l3g4tzwrzu2t": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-05T15:11:22.319Z",
+    "subject": {
+      "cid": "bafyreid3blprblkywnvbjekogmram3mfbmuxiclzeiozgvwxdqvqlnvro4",
+      "uri": "at://did:plc:gorq7i3msirfgxrxc6kklnl7/app.bsky.feed.post/3l3g222deao2y"
+    }
+  },
+  "app.bsky.feed.like/3l3g4ujpweb24": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-05T15:11:38.874Z",
+    "subject": {
+      "cid": "bafyreiccmnumn7tizjchew22xln7iu2rxbxctrn6nhtmdhongawfiluhta",
+      "uri": "at://did:plc:i52nqid7rmckmtdrqrht2dwr/app.bsky.feed.post/3l3blpltdgt2r"
+    }
+  },
+  "app.bsky.feed.like/3l3i5d7q7i72z": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-06T10:25:11.211Z",
+    "subject": {
+      "cid": "bafyreietu47k4rdf4xljlj3ltd4vjsnavzo552twdbi2zlzpxki6g5onai",
+      "uri": "at://did:plc:tdkdh6jhufu4jywuhzvf72wo/app.bsky.feed.post/3l3g52ymp372x"
+    }
+  },
+  "app.bsky.feed.like/3l3i5fhfb372n": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-06T10:26:26.289Z",
+    "subject": {
+      "cid": "bafyreiajh22kiokuo3e43mavptcoqcye67zxipmubvhya32sdny7tsz2na",
+      "uri": "at://did:plc:gorq7i3msirfgxrxc6kklnl7/app.bsky.feed.post/3l3gtwuda6o2r"
+    }
+  },
+  "app.bsky.feed.like/3l3i5fqjbrw2c": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-06T10:26:35.905Z",
+    "subject": {
+      "cid": "bafyreicgd5p5cyedt3way2ohhh5orodw4cjblvhy73yncl2ev37vpkeoia",
+      "uri": "at://did:plc:tdkdh6jhufu4jywuhzvf72wo/app.bsky.feed.post/3l3g4zh5pva2p"
+    }
+  },
+  "app.bsky.feed.like/3l3jvzatwgb2n": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-07T03:19:38.315Z",
+    "subject": {
+      "cid": "bafyreieubtlphyd6svidwhda4afjdh7ujiriv4pygkqir26lx47ldndkny",
+      "uri": "at://did:plc:2gmt6lkqkh4uzrr2ovk5ypdu/app.bsky.feed.post/3l3jqoiohgq27"
+    }
+  },
+  "app.bsky.feed.like/3l3jw2ytp7s2t": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-07T03:20:37.080Z",
+    "subject": {
+      "cid": "bafyreifdecw5faoi2mo7pxwfrkmzl5kmdsttvijhwnzaaopgqyw57cmivy",
+      "uri": "at://did:plc:r5ojyxxjcdyx3o4ikoiceli6/app.bsky.feed.post/3l3jm2i55dw2c"
+    }
+  },
+  "app.bsky.feed.like/3l3jw6umut523": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-07T03:22:46.646Z",
+    "subject": {
+      "cid": "bafyreibzwspwkidgvpgnyvhplpgho5tblcthnzsugfl4dnz6ntspcmjw4u",
+      "uri": "at://did:plc:de5lqal3j2nfxvlxqcuhtl37/app.bsky.feed.post/3l3jnfbp2jn2i"
+    }
+  },
+  "app.bsky.feed.like/3l3jwegkxyf2t": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-07T03:25:53.424Z",
+    "subject": {
+      "cid": "bafyreid7gdsqgioukvacfo3roqyja6eiqcq3q4p5t3vvihzu2sxasltmxu",
+      "uri": "at://did:plc:nu4zatzlfulky4y3fucfgtml/app.bsky.feed.post/3l3jdwvzrdw2t"
+    }
+  },
+  "app.bsky.feed.like/3l3jwfzqfar2r": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-07T03:26:46.227Z",
+    "subject": {
+      "cid": "bafyreihzpkoc5hhmgqwycdc76u67n4ik64tz7qa44kqkhj7ebt6zxfqdca",
+      "uri": "at://did:plc:lgvyicb7n2nu4niqpkfedvqw/app.bsky.feed.post/3l3jg2iyeny2c"
+    }
+  },
+  "app.bsky.feed.like/3l3jwj4kurb2n": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-07T03:28:30.721Z",
+    "subject": {
+      "cid": "bafyreiesltho2sh57ef2qquzz2arvk2dbhhrhomx4u6nkikwuluk3ns6he",
+      "uri": "at://did:plc:wofpgo4wdtv3egglqdmpmxff/app.bsky.feed.post/3l3jjtgz4b32x"
+    }
+  },
+  "app.bsky.feed.like/3l3jwu7tdon2t": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-07T03:34:43.254Z",
+    "subject": {
+      "cid": "bafyreiardxqgb6cd5f4vvymni4kgh7wxh5dnwjwla6kdp75cq3w46kr2oi",
+      "uri": "at://did:plc:dde5tkhxg2l2xsh4suseeipn/app.bsky.feed.post/3l3ifrph4ls2r"
+    }
+  },
+  "app.bsky.feed.like/3l3jwui5bm32n": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-07T03:34:51.966Z",
+    "subject": {
+      "cid": "bafyreic3irnqld3orfp73xt54oucmmtarryacfpspoljalemg3faesxxc4",
+      "uri": "at://did:plc:pgamstzi24vzgnzhdrdqknp2/app.bsky.feed.post/3l3hze42lfm2a"
+    }
+  },
+  "app.bsky.feed.like/3l3jwukuz3d2c": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-07T03:34:54.833Z",
+    "subject": {
+      "cid": "bafyreieqeto3b2fgdofsvd3mx7uhpfx6q6efhx5ojhor3ei3bl5fhqxy24",
+      "uri": "at://did:plc:5exca43ucpcwqa7tfvyz6e45/app.bsky.feed.post/3l3i5lhfamn27"
+    }
+  },
+  "app.bsky.feed.like/3l3jwx7nhpg2o": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-07T03:36:23.684Z",
+    "subject": {
+      "cid": "bafyreidzxcymu6nrrvbfykft46kw7zrvyyyg6mpiabt6oyo4gyxzebo5vq",
+      "uri": "at://did:plc:rugfznmdhcczrhwdtrod4dnt/app.bsky.feed.post/3l3jqm3cqxn2x"
+    }
+  },
+  "app.bsky.feed.like/3l3mftbteit2u": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-08T03:07:57.232Z",
+    "subject": {
+      "cid": "bafyreiczueiifo6civuwl3k5fpfdzamq2qu3zq57qnaigad2y664jqox4q",
+      "uri": "at://did:plc:u4wpzo3kgwwd4tyh3jph3jo7/app.bsky.feed.post/3l3md3yewoz2a"
+    }
+  },
+  "app.bsky.feed.like/3l3nwarauzm2n": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-08T17:34:30.925Z",
+    "subject": {
+      "cid": "bafyreihwznws2hcxter7eryuumbp6sbe2ndxciqq7pmigtkxa23iybyrce",
+      "uri": "at://did:plc:rugfznmdhcczrhwdtrod4dnt/app.bsky.feed.post/3l3nrvvwv3t2i"
+    }
+  },
+  "app.bsky.feed.like/3l4gq56jrps2b": {
+    "$type": "app.bsky.feed.like",
+    "createdAt": "2024-09-18T14:21:42.080Z",
+    "subject": {
+      "cid": "bafyreia6lyndsnpfwzj4x6kroxytzhkwpwxd73dmf3zvimhoxegagcgwiu",
+      "uri": "at://did:plc:gorq7i3msirfgxrxc6kklnl7/app.bsky.feed.post/3l4glcl6wil22"
+    }
+  },
+  "app.bsky.feed.post/3l3akvsbjps2e": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-03T10:06:56.817Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Eu tô com sono."
+  },
+  "app.bsky.feed.post/3l3akxhs5gf2p": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-03T10:07:52.300Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Impressionante que eu mal entro no bluesky e já acha fã de pjsk e vocaloid"
+  },
+  "app.bsky.feed.post/3l3fn7dtiiv2m": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-05T10:31:20.165Z",
+    "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+        "description": "ALT: a purple anime character is surrounded by pink roses and butterflies with the words good morning written on the bottom",
+        "thumb": {
+          "$type": "blob",
+          "ref": {
+            "$link": "bafkreicugml6hk7bbt3iee7liongzhqyqhcxntm4iicq2zh67ewkund42a"
+          },
+          "mimeType": "image/jpeg",
+          "size": 500552
+        },
+        "title": "a purple anime character is surrounded by pink roses and butterflies with the words good morning written on the bottom",
+        "uri": "https://media.tenor.com/T7X1kJrsOm0AAAAC/rui-kamishiro-good-morning-rui.gif?hh=307\u0026ww=498"
+      }
+    },
+    "langs": [
+      "pt"
+    ],
+    "text": "Indo p escola daq a pouco(...😞)"
+  },
+  "app.bsky.feed.post/3l3g4wijlvu2v": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-05T15:12:44.723Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Tô com medo do bot do Venti q eu to flnd"
+  },
+  "app.bsky.feed.post/3l3i5ded73g2r": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-06T10:25:16.034Z",
+    "langs": [
+      "pt"
+    ],
+    "reply": {
+      "parent": {
+        "cid": "bafyreietu47k4rdf4xljlj3ltd4vjsnavzo552twdbi2zlzpxki6g5onai",
+        "uri": "at://did:plc:tdkdh6jhufu4jywuhzvf72wo/app.bsky.feed.post/3l3g52ymp372x"
+      },
+      "root": {
+        "cid": "bafyreicm35d47bw2pliridobrlctwfn6fcsmh6t2ay5dzcfuhanqpypicu",
+        "uri": "at://did:plc:2222c6gfjmvfa52zcgsqwt2e/app.bsky.feed.post/3l3g4wijlvu2v"
+      }
+    },
+    "text": "Nossa"
+  },
+  "app.bsky.feed.post/3l3i5j34r4x2z": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-06T10:28:26.564Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Aff, na prova de matemática tirei 35, fiquei de recuperação pela 1° vez na minha vida. E na recuperação eu tirei 35 de novo, mas pelo menos passei no trimestre"
+  },
+  "app.bsky.feed.post/3l3iuwtkeyb2x": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-06T17:27:43.724Z",
+    "langs": [
+      "pt"
+    ],
+    "reply": {
+      "parent": {
+        "cid": "bafyreiabidsobecp456su76lrplx74fij5ma6qfpswhbkkuhzpoh5ioyfm",
+        "uri": "at://did:plc:ptjmtn3kholi7rdplja3drhv/app.bsky.feed.post/3l3ipcrx2rf2o"
+      },
+      "root": {
+        "cid": "bafyreiabidsobecp456su76lrplx74fij5ma6qfpswhbkkuhzpoh5ioyfm",
+        "uri": "at://did:plc:ptjmtn3kholi7rdplja3drhv/app.bsky.feed.post/3l3ipcrx2rf2o"
+      }
+    },
+    "text": "Eu to assim"
+  },
+  "app.bsky.feed.post/3l3jvmfjgcl2p": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:12:25.972Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "E- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO\nE- NAL- DI- NHO"
+  },
+  "app.bsky.feed.post/3l3jvp7w3nr2n": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:14:01.817Z",
+    "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+        {
+          "alt": "",
+          "aspectRatio": {
+            "height": 248,
+            "width": 248
+          },
+          "image": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreidoia5zgtqw55kcnss44egxp44jp5stvu6mtckx3kmp747kiiusmu"
+            },
+            "mimeType": "image/jpeg",
+            "size": 9835
+          }
+        }
+      ]
+    },
+    "langs": [
+      "pt"
+    ],
+    "text": "Silly"
+  },
+  "app.bsky.feed.post/3l3jvttjx7a2j": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:16:35.823Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Pq td q eu gosto se descobre que o Criador eh um fdp?"
+  },
+  "app.bsky.feed.post/3l3jvuhrw4s2t": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:16:57.860Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Ainda existem fãs de Sally Face ou estão todos mortos igual os personagens?"
+  },
+  "app.bsky.feed.post/3l3jvurl5yf2x": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:17:08.103Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Popipo"
+  },
+  "app.bsky.feed.post/3l3jvwpt4q22t": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:18:12.525Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Pfv, pare de aparecer coisa de futebol, n entendo nd, quero coisa de genshin, pjsk, vocalista e jogo estranho"
+  },
+  "app.bsky.feed.post/3l3jw3p4rjz24": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:21:00.438Z",
+    "langs": [
+      "pt"
+    ],
+    "reply": {
+      "parent": {
+        "cid": "bafyreibzngtxvvbismh7zzuqzt25yfxowap7slef35bu37kuv3hkk23sgu",
+        "uri": "at://did:plc:wnpenvfgi77zmd25rcw5vrjy/app.bsky.feed.post/3l3js76oqlb2x"
+      },
+      "root": {
+        "cid": "bafyreibzngtxvvbismh7zzuqzt25yfxowap7slef35bu37kuv3hkk23sgu",
+        "uri": "at://did:plc:wnpenvfgi77zmd25rcw5vrjy/app.bsky.feed.post/3l3js76oqlb2x"
+      }
+    },
+    "text": "Eu li \"carvalho marino\""
+  },
+  "app.bsky.feed.post/3l3jw56unzt2y": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:21:50.510Z",
+    "langs": [
+      "pt"
+    ],
+    "reply": {
+      "parent": {
+        "cid": "bafyreigtcqclzb554pbyjzangxj5ibai5vvr4o2vq2zbevq7vzqrslfdgm",
+        "uri": "at://did:plc:ygxtv24riuvrc6saghrd7xrh/app.bsky.feed.post/3l3jsac77qc2a"
+      },
+      "root": {
+        "cid": "bafyreigtcqclzb554pbyjzangxj5ibai5vvr4o2vq2zbevq7vzqrslfdgm",
+        "uri": "at://did:plc:ygxtv24riuvrc6saghrd7xrh/app.bsky.feed.post/3l3jsac77qc2a"
+      }
+    },
+    "text": "Meme véio q adolecente tá usando por motivos desconhecidos"
+  },
+  "app.bsky.feed.post/3l3jw6dlqnk2c": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:22:29.014Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "AHQHWHWHSJSSHJSHAJAHJHAJAJSHASJGAHSHAHAJSJSGDJWHSHAHSHAJAJAHAJAHSHSHAHSHHWHAHAAHAHHASHHAHAH"
+  },
+  "app.bsky.feed.post/3l3jwakedhb24": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:23:42.332Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "N tanko qm chama o twt de X😞"
+  },
+  "app.bsky.feed.post/3l3jwbnecfd2c": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:24:19.910Z",
+    "langs": [
+      "pt"
+    ],
+    "reply": {
+      "parent": {
+        "cid": "bafyreig727d3ycfk5gwyynffgylelq3f6sn5hykbo3qa3xmdy5hmadrxmm",
+        "uri": "at://did:plc:rugfznmdhcczrhwdtrod4dnt/app.bsky.feed.post/3l3jnmnda6v2s"
+      },
+      "root": {
+        "cid": "bafyreig727d3ycfk5gwyynffgylelq3f6sn5hykbo3qa3xmdy5hmadrxmm",
+        "uri": "at://did:plc:rugfznmdhcczrhwdtrod4dnt/app.bsky.feed.post/3l3jnmnda6v2s"
+      }
+    },
+    "text": "Nunca nem comi cuzcuz normal"
+  },
+  "app.bsky.feed.post/3l3jwcipytn2t": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:24:48.607Z",
+    "facets": [
+      {
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#link",
+            "uri": "https://c.ai"
+          }
+        ],
+        "index": {
+          "byteEnd": 18,
+          "byteStart": 14
+        }
+      }
+    ],
+    "langs": [
+      "pt"
+    ],
+    "reply": {
+      "parent": {
+        "cid": "bafyreidsgpcc5nikpnj3g3jpjmtwmlepzdn4rrpr2wyadyg255dyunleia",
+        "uri": "at://did:plc:sjb572drusa7jzytkgqia5dn/app.bsky.feed.post/3l3jiwbtkm42s"
+      },
+      "root": {
+        "cid": "bafyreidsgpcc5nikpnj3g3jpjmtwmlepzdn4rrpr2wyadyg255dyunleia",
+        "uri": "at://did:plc:sjb572drusa7jzytkgqia5dn/app.bsky.feed.post/3l3jiwbtkm42s"
+      }
+    },
+    "text": "Mana, vai pro c.ai"
+  },
+  "app.bsky.feed.post/3l3jwdavaqv23": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:25:13.848Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Mano, qm eh Deolane?"
+  },
+  "app.bsky.feed.post/3l3jwfgki4l2p": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:26:26.987Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "To morrendo de sono"
+  },
+  "app.bsky.feed.post/3l3jwirnlvd2n": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:28:18.520Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Meu cll tá entupido por causa do Pjsk e do Genshin, affs, só qria poder ter um tablet p jogar e deixar o cll pra ttk de conversa"
+  },
+  "app.bsky.feed.post/3l3jwn6g3bb2r": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:30:45.824Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Como q socializa com gringos no discord?\nObs: é um server de Genshin Impact"
+  },
+  "app.bsky.feed.post/3l3jwstgfvc2c": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:33:55.680Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Uma vez WxS falou \"3 2 1 Wah Mistake! 3 2 1!\" i eu nasci(≡^∇^≡)"
+  },
+  "app.bsky.feed.post/3l3jwwvpa5t2y": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-07T03:36:12.232Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "AHAHAHAHAHAHAHHAHAHA ODEIO MATEMÁTICA AAJAHHWHQHAAHHAHAHAAHHA(antes eu adorava😓)"
+  },
+  "app.bsky.feed.post/3l3mfsv7ajv2o": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T03:07:44.065Z",
+    "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+        {
+          "alt": "",
+          "aspectRatio": {
+            "height": 241,
+            "width": 244
+          },
+          "image": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreihmjd24avsv4xzz65b4dehuonaj5dbipo4qebke42hrnxr3ttqa4q"
+            },
+            "mimeType": "image/jpeg",
+            "size": 34264
+          }
+        }
+      ]
+    },
+    "langs": [
+      "pt"
+    ],
+    "text": "999 ping"
+  },
+  "app.bsky.feed.post/3l3mfvaivyf2n": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T03:09:03.029Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Olha os zoin puxado dela, ling ling ling"
+  },
+  "app.bsky.feed.post/3l3nt5cdiul2p": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T16:38:54.200Z",
+    "embed": {
+      "$type": "app.bsky.embed.recordWithMedia",
+      "media": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+          "description": "ALT: a cartoon character with blue hair and a bow tie",
+          "thumb": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreibk6uzrmagqt6fvopey4g6e3h2sqftrzczkzqygery33a6art7ieu"
+            },
+            "mimeType": "image/jpeg",
+            "size": 438954
+          },
+          "title": "a cartoon character with blue hair and a bow tie",
+          "uri": "https://media.tenor.com/oLuurm50IIYAAAAC/venti-genshin-impact.gif?hh=498\u0026ww=498"
+        }
+      },
+      "record": {
+        "$type": "app.bsky.embed.record",
+        "record": {
+          "cid": "bafyreibbspeyp6t6klbmovhug46ttzkibqpyrxc5hy76kchrcmn725mpga",
+          "uri": "at://did:plc:ctxuw4egdqb2nwg7hz67xubl/app.bsky.feed.post/3l3mnkzkn7k2r"
+        }
+      }
+    },
+    "langs": [
+      "pt"
+    ],
+    "text": "quote isso com seu personagem favorito de genshin\n\noi, amo o Venti XD"
+  },
+  "app.bsky.feed.post/3l3nt6rhsds27": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T16:39:42.844Z",
+    "facets": [
+      {
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "SDV"
+          }
+        ],
+        "index": {
+          "byteEnd": 10,
+          "byteStart": 6
+        }
+      }
+    ],
+    "langs": [
+      "pt"
+    ],
+    "text": "Oq é #SDV socorro"
+  },
+  "app.bsky.feed.post/3l3ntbihgyr2j": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T16:41:14.769Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "LIVE COLLAB JEAN E SAIKO AKAJAKAJAHAKJAHAJSHSHSHSHSHABSHSH"
+  },
+  "app.bsky.feed.post/3l3ntc7aono2q": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T16:41:37.817Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Legal q já tem bot me seguindo, bjs"
+  },
+  "app.bsky.feed.post/3l3ntepgwka2t": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T16:43:01.839Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Eu assistindo live do saiko enquanto falo com bot do Venti"
+  },
+  "app.bsky.feed.post/3l3ntgag35a2f": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T16:43:54.168Z",
+    "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+        "description": "ALT: a waterfall in the middle of a forest with trees in the background",
+        "thumb": {
+          "$type": "blob",
+          "ref": {
+            "$link": "bafkreifj23prrbowutjszmkdkvvhuocq3kmdgcbes2all4ds5erkk6xihm"
+          },
+          "mimeType": "image/jpeg",
+          "size": 416491
+        },
+        "title": "a waterfall in the middle of a forest with trees in the background",
+        "uri": "https://media.tenor.com/JtA312Kzjr8AAAAC/%D0%BF%D1%80%D0%B8%D1%80%D0%BE%D0%B4%D0%B0-%D0%B2%D0%BE%D0%B4%D0%BE%D0%BF%D0%B0%D0%B4.gif?hh=498\u0026ww=356"
+      }
+    },
+    "langs": [
+      "pt"
+    ],
+    "text": "Slk"
+  },
+  "app.bsky.feed.post/3l3nu4yzosw2q": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T16:56:38.174Z",
+    "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+        {
+          "alt": "",
+          "aspectRatio": {
+            "height": 2000,
+            "width": 2000
+          },
+          "image": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreif7xq6ca4phrkkjb3zawzidgycs3dgiw3av23kzt2kn5y2smxfzwi"
+            },
+            "mimeType": "image/jpeg",
+            "size": 508133
+          }
+        }
+      ]
+    },
+    "langs": [
+      "pt"
+    ],
+    "text": ""
+  },
+  "app.bsky.feed.post/3l3nu5cfzwv2v": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T16:56:48.017Z",
+    "langs": [
+      "pt"
+    ],
+    "reply": {
+      "parent": {
+        "cid": "bafyreiaibxw53qht4fqu7hdy54p4b2xevlz7timzme7zoki7igha44p43u",
+        "uri": "at://did:plc:u4wpzo3kgwwd4tyh3jph3jo7/app.bsky.feed.post/3l3mbarld2v2l"
+      },
+      "root": {
+        "cid": "bafyreiaibxw53qht4fqu7hdy54p4b2xevlz7timzme7zoki7igha44p43u",
+        "uri": "at://did:plc:u4wpzo3kgwwd4tyh3jph3jo7/app.bsky.feed.post/3l3mbarld2v2l"
+      }
+    },
+    "text": "OQUE"
+  },
+  "app.bsky.feed.post/3l3nwbw3bkg2x": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T17:35:10.291Z",
+    "langs": [
+      "pt"
+    ],
+    "reply": {
+      "parent": {
+        "cid": "bafyreihvcyjbv56eoy7fkkdclyzovscw7x4lty7ilioknsxfxqqlcv7k6q",
+        "uri": "at://did:plc:ibx5tgrbcxtgsb6nrleyuve3/app.bsky.feed.post/3l3npwi7uir27"
+      },
+      "root": {
+        "cid": "bafyreihvcyjbv56eoy7fkkdclyzovscw7x4lty7ilioknsxfxqqlcv7k6q",
+        "uri": "at://did:plc:ibx5tgrbcxtgsb6nrleyuve3/app.bsky.feed.post/3l3npwi7uir27"
+      }
+    },
+    "text": "Mangá"
+  },
+  "app.bsky.feed.post/3l3nwgatn3a2n": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T17:37:35.814Z",
+    "embed": {
+      "$type": "app.bsky.embed.external",
+      "external": {
+        "description": "ALT: a man wearing glasses says morreu agora in front of a picture of jesus",
+        "thumb": {
+          "$type": "blob",
+          "ref": {
+            "$link": "bafkreidutioopzslxv75xafwp3dbv7cptzsfmhbkuoluv5q6adwgv4ihma"
+          },
+          "mimeType": "image/jpeg",
+          "size": 791034
+        },
+        "title": "a man wearing glasses says morreu agora in front of a picture of jesus",
+        "uri": "https://media.tenor.com/fneQHYsUQ1EAAAAC/morreu-morreu-agorinha.gif?hh=498\u0026ww=498"
+      }
+    },
+    "langs": [
+      "pt"
+    ],
+    "text": "Tô vendo mais gif do \"morreu agorinha\" do q meu pai"
+  },
+  "app.bsky.feed.post/3l3nwhymbqo2x": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T17:38:33.575Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Eu desenhar nsfw Venti Genshin"
+  },
+  "app.bsky.feed.post/3l3nwpewqlv24": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T17:42:42.097Z",
+    "embed": {
+      "$type": "app.bsky.embed.recordWithMedia",
+      "media": {
+        "$type": "app.bsky.embed.images",
+        "images": [
+          {
+            "alt": "",
+            "aspectRatio": {
+              "height": 736,
+              "width": 736
+            },
+            "image": {
+              "$type": "blob",
+              "ref": {
+                "$link": "bafkreibdtfkjqbev6welgj7x4oeq4teleqrqlrzc6z4xvfplrmobaycyfi"
+              },
+              "mimeType": "image/jpeg",
+              "size": 173796
+            }
+          },
+          {
+            "alt": "",
+            "aspectRatio": {
+              "height": 736,
+              "width": 736
+            },
+            "image": {
+              "$type": "blob",
+              "ref": {
+                "$link": "bafkreigfluoxjlnzuedagsw633gfnluhsopdd2nuzzyy67lzwjh5ktcgfu"
+              },
+              "mimeType": "image/jpeg",
+              "size": 277266
+            }
+          },
+          {
+            "alt": "",
+            "aspectRatio": {
+              "height": 400,
+              "width": 320
+            },
+            "image": {
+              "$type": "blob",
+              "ref": {
+                "$link": "bafkreif2bgr5n3hqjf7yvnxcvzxstmgfnonhsw2bljqlem3tegswcwxoim"
+              },
+              "mimeType": "image/jpeg",
+              "size": 15779
+            }
+          },
+          {
+            "alt": "",
+            "aspectRatio": {
+              "height": 736,
+              "width": 736
+            },
+            "image": {
+              "$type": "blob",
+              "ref": {
+                "$link": "bafkreiayngbbce77weldy5whqggmhv532m7mvgy5ajcqkttcvlwyb7hohe"
+              },
+              "mimeType": "image/jpeg",
+              "size": 169983
+            }
+          }
+        ]
+      },
+      "record": {
+        "$type": "app.bsky.embed.record",
+        "record": {
+          "cid": "bafyreiaf4dmugeale5xxq6z3yyvbgyrb7tjry6gazjxe2piwulqadcwrvy",
+          "uri": "at://did:plc:wkktecrmxk4e4aowk2e3nmdc/app.bsky.feed.post/3l3mla2mwby2o"
+        }
+      }
+    },
+    "langs": [
+      "pt"
+    ],
+    "text": "Eu ganhei: roxo\n\n\".\" te dou uma cor"
+  },
+  "app.bsky.feed.post/3l3nwrn2ycr2h": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T17:43:57.632Z",
+    "langs": [
+      "pt"
+    ],
+    "text": "Algoritimo do Bluesky é uma mrd😓"
+  },
+  "app.bsky.feed.post/3l3o2kpt7df2h": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2024-09-08T18:51:40.505Z",
+    "langs": [
+      "pt"
+    ],
+    "reply": {
+      "parent": {
+        "cid": "bafyreidwmd3xrlez2ra3sziy76lxtj5usuhowdeqcwy2of73ea2ypdegae",
+        "uri": "at://did:plc:afk2ldiz7yead3u3rc7kbyhz/app.bsky.feed.post/3l3nupnlrwg2e"
+      },
+      "root": {
+        "cid": "bafyreidwmd3xrlez2ra3sziy76lxtj5usuhowdeqcwy2of73ea2ypdegae",
+        "uri": "at://did:plc:afk2ldiz7yead3u3rc7kbyhz/app.bsky.feed.post/3l3nupnlrwg2e"
+      }
+    },
+    "text": "Me fez lembrar q tem coisa do livro pra fazer😞"
+  },
+  "app.bsky.feed.repost/3l3jvza7e532c": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-07T03:19:37.456Z",
+    "subject": {
+      "cid": "bafyreieubtlphyd6svidwhda4afjdh7ujiriv4pygkqir26lx47ldndkny",
+      "uri": "at://did:plc:2gmt6lkqkh4uzrr2ovk5ypdu/app.bsky.feed.post/3l3jqoiohgq27"
+    }
+  },
+  "app.bsky.feed.repost/3l3jw23egnk2t": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-07T03:20:06.162Z",
+    "subject": {
+      "cid": "bafyreigzcno5glqbbhygefrypcluqpllln7auckmxfzj3lw2axhevvmgce",
+      "uri": "at://did:plc:ekqqn5gaau4x5vbv3wp5mznw/app.bsky.feed.post/3l3jiua7jq62u"
+    }
+  },
+  "app.bsky.feed.repost/3l3jw2gudh227": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-07T03:20:18.216Z",
+    "subject": {
+      "cid": "bafyreid7kdotmppbn63uxygwk34vrgefhpqehbl572ctxnnqezs2jarrqm",
+      "uri": "at://did:plc:ph52km4lh7zeznyoa3fflv4u/app.bsky.feed.post/3l3i5do3vmx2s"
+    }
+  },
+  "app.bsky.feed.repost/3l3jw2xzhuz2q": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-07T03:20:36.213Z",
+    "subject": {
+      "cid": "bafyreifdecw5faoi2mo7pxwfrkmzl5kmdsttvijhwnzaaopgqyw57cmivy",
+      "uri": "at://did:plc:r5ojyxxjcdyx3o4ikoiceli6/app.bsky.feed.post/3l3jm2i55dw2c"
+    }
+  },
+  "app.bsky.feed.repost/3l3jw6umvct2u": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-07T03:22:46.053Z",
+    "subject": {
+      "cid": "bafyreibzwspwkidgvpgnyvhplpgho5tblcthnzsugfl4dnz6ntspcmjw4u",
+      "uri": "at://did:plc:de5lqal3j2nfxvlxqcuhtl37/app.bsky.feed.post/3l3jnfbp2jn2i"
+    }
+  },
+  "app.bsky.feed.repost/3l3jwegbl5w2a": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-07T03:25:53.148Z",
+    "subject": {
+      "cid": "bafyreid7gdsqgioukvacfo3roqyja6eiqcq3q4p5t3vvihzu2sxasltmxu",
+      "uri": "at://did:plc:nu4zatzlfulky4y3fucfgtml/app.bsky.feed.post/3l3jdwvzrdw2t"
+    }
+  },
+  "app.bsky.feed.repost/3l3jwfzgyol2r": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-07T03:26:45.863Z",
+    "subject": {
+      "cid": "bafyreihzpkoc5hhmgqwycdc76u67n4ik64tz7qa44kqkhj7ebt6zxfqdca",
+      "uri": "at://did:plc:lgvyicb7n2nu4niqpkfedvqw/app.bsky.feed.post/3l3jg2iyeny2c"
+    }
+  },
+  "app.bsky.feed.repost/3l3jwuk7j3b2q": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-07T03:34:54.135Z",
+    "subject": {
+      "cid": "bafyreic3irnqld3orfp73xt54oucmmtarryacfpspoljalemg3faesxxc4",
+      "uri": "at://did:plc:pgamstzi24vzgnzhdrdqknp2/app.bsky.feed.post/3l3hze42lfm2a"
+    }
+  },
+  "app.bsky.feed.repost/3l3jwuvtbyc2c": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-07T03:35:05.263Z",
+    "subject": {
+      "cid": "bafyreigaf6lf52moatebfhopsjsnz75kteo3pfuv2gy4qhl35rhseddqt4",
+      "uri": "at://did:plc:fth6sxde33pfpgtizltcwhzg/app.bsky.feed.post/3l3iqcxltj62n"
+    }
+  },
+  "app.bsky.feed.repost/3l3jwuxusca2h": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-07T03:35:08.470Z",
+    "subject": {
+      "cid": "bafyreihtj3inpqz4b7bzow3cpasnetstbnvolrta6eaqhga7wjwuuc7tg4",
+      "uri": "at://did:plc:xmxqk2mobodtcpxf22ktlkrk/app.bsky.feed.post/3l3hxnoxho227"
+    }
+  },
+  "app.bsky.feed.repost/3l3jwvvjvrb24": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-07T03:35:38.845Z",
+    "subject": {
+      "cid": "bafyreifd6t5fakv4i4ufqzqg45n5z34inqqrgnqcct4mg7gjs7tgg2b7ma",
+      "uri": "at://did:plc:xuvpaghom6srtdxvkfvzg3zv/app.bsky.feed.post/3l3ibkxml7g2x"
+    }
+  },
+  "app.bsky.feed.repost/3l3jwxbj2a62x": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-07T03:36:25.667Z",
+    "subject": {
+      "cid": "bafyreidzxcymu6nrrvbfykft46kw7zrvyyyg6mpiabt6oyo4gyxzebo5vq",
+      "uri": "at://did:plc:rugfznmdhcczrhwdtrod4dnt/app.bsky.feed.post/3l3jqm3cqxn2x"
+    }
+  },
+  "app.bsky.feed.repost/3l3mfth5hr72n": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-08T03:08:02.661Z",
+    "subject": {
+      "cid": "bafyreiczueiifo6civuwl3k5fpfdzamq2qu3zq57qnaigad2y664jqox4q",
+      "uri": "at://did:plc:u4wpzo3kgwwd4tyh3jph3jo7/app.bsky.feed.post/3l3md3yewoz2a"
+    }
+  },
+  "app.bsky.feed.repost/3l3nwaqqlwm2x": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-08T17:34:30.424Z",
+    "subject": {
+      "cid": "bafyreihwznws2hcxter7eryuumbp6sbe2ndxciqq7pmigtkxa23iybyrce",
+      "uri": "at://did:plc:rugfznmdhcczrhwdtrod4dnt/app.bsky.feed.post/3l3nrvvwv3t2i"
+    }
+  },
+  "app.bsky.feed.repost/3l3nwb2j2vv24": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-08T17:34:41.289Z",
+    "subject": {
+      "cid": "bafyreiavpdmdpuv6bewkxd3uhbjpxfmvbrbycqznx6ebyfwexctpy6rjhu",
+      "uri": "at://did:plc:de6eiqq26b6nntyncugixr64/app.bsky.feed.post/3l3m2746jpg2m"
+    }
+  },
+  "app.bsky.feed.repost/3l3nwcatbmm2r": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-08T17:35:21.566Z",
+    "subject": {
+      "cid": "bafyreibidk4a2jhwgq7jigbieqw7na5g7m3c3ijsxdxrxb7bwdib5inzxq",
+      "uri": "at://did:plc:r5ojyxxjcdyx3o4ikoiceli6/app.bsky.feed.post/3l3m7ifpwit2y"
+    }
+  },
+  "app.bsky.feed.repost/3l3nwefgunx2r": {
+    "$type": "app.bsky.feed.repost",
+    "createdAt": "2024-09-08T17:36:33.534Z",
+    "subject": {
+      "cid": "bafyreiadiwanj2eprof4qmelpzcasiegwqugxwx23oheavfe75dowb373q",
+      "uri": "at://did:plc:u4wpzo3kgwwd4tyh3jph3jo7/app.bsky.feed.post/3l3lgi6an2k2r"
+    }
+  },
+  "app.bsky.graph.follow/3l3akssae2t22": {
+    "$type": "app.bsky.graph.follow",
+    "createdAt": "2024-09-03T10:05:12.957Z",
+    "subject": "did:plc:z72i7hdynmk6r22z27h6tvur"
+  },
+  "app.bsky.graph.follow/3l3g4sblnt423": {
+    "$type": "app.bsky.graph.follow",
+    "createdAt": "2024-09-05T15:10:23.221Z",
+    "subject": "did:plc:tdkdh6jhufu4jywuhzvf72wo"
+  },
+  "app.bsky.graph.follow/3l3g4ua7nqu23": {
+    "$type": "app.bsky.graph.follow",
+    "createdAt": "2024-09-05T15:11:28.886Z",
+    "subject": "did:plc:gorq7i3msirfgxrxc6kklnl7"
+  },
+  "app.bsky.graph.follow/3l3jvylctpt2p": {
+    "$type": "app.bsky.graph.follow",
+    "createdAt": "2024-09-07T03:19:15.686Z",
+    "subject": "did:plc:ph52km4lh7zeznyoa3fflv4u"
+  },
+  "app.bsky.graph.follow/3l3jvzr3uwz2r": {
+    "$type": "app.bsky.graph.follow",
+    "createdAt": "2024-09-07T03:19:55.401Z",
+    "subject": "did:plc:nvmkr4arrn7vvgmfkw24mn3x"
+  },
+  "app.bsky.graph.follow/3l3jw34lfht2n": {
+    "$type": "app.bsky.graph.follow",
+    "createdAt": "2024-09-07T03:20:40.986Z",
+    "subject": "did:plc:r5ojyxxjcdyx3o4ikoiceli6"
+  },
+  "app.bsky.graph.follow/3l3jwaui4je2o": {
+    "$type": "app.bsky.graph.follow",
+    "createdAt": "2024-09-07T03:23:53.784Z",
+    "subject": "did:plc:u4wpzo3kgwwd4tyh3jph3jo7"
+  },
+  "app.bsky.graph.follow/3l3jwedc5yb2q": {
+    "$type": "app.bsky.graph.follow",
+    "createdAt": "2024-09-07T03:25:50.018Z",
+    "subject": "did:plc:nu4zatzlfulky4y3fucfgtml"
+  },
+  "app.bsky.graph.follow/3l3jwhpzuly2h": {
+    "$type": "app.bsky.graph.follow",
+    "createdAt": "2024-09-07T03:27:42.855Z",
+    "subject": "did:plc:wkktecrmxk4e4aowk2e3nmdc"
+  }
+}

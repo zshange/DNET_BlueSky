@@ -1,0 +1,22 @@
+{
+  "associated": {
+    "chat": {
+      "allowIncoming": "following"
+    },
+    "feedgens": 0,
+    "labeler": false,
+    "lists": 0,
+    "starterPacks": 0
+  },
+  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2222c6gfjmvfa52zcgsqwt2e/bafkreifsuy5de4napploqqimdg3ngwka2mg2wbo6bffq4naeo6ir55fmva@jpeg",
+  "banner": "https://cdn.bsky.app/img/banner/plain/did:plc:2222c6gfjmvfa52zcgsqwt2e/bafkreigh2kfywkhv2l46rgcxru7vi33czlc37ecc7p5helyuynz6gqfary@jpeg",
+  "createdAt": "2024-09-03T10:05:17.196Z",
+  "description": "Nyan Nyan:3 Ruida Nyan\u003e\u003c",
+  "did": "did:plc:2222c6gfjmvfa52zcgsqwt2e",
+  "displayName": "╶⃝⃤☆~🫂🗝THATHA(≧∇≦)/~☆ ³⁶⁹",
+  "followersCount": 22,
+  "followsCount": 9,
+  "handle": "thatha-shifter.bsky.social",
+  "indexedAt": "2024-09-06T10:26:01.523Z",
+  "postsCount": 41
+}
