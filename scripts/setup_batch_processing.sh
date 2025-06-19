@@ -2,7 +2,7 @@
 
 # 脚本配置
 CSV_SOURCE_DIR="/mydata/csv"
-SOURCE_PROGRAM_DIR="/users/sbwang/DNET_BlueSky/downloader/bsky-indexer/cmd/record_blob_downloader"
+SOURCE_PROGRAM_DIR="record_downloader"
 WORK_BASE_DIR="/mydata/batch_processing"
 FILES_PER_GROUP=16
 
