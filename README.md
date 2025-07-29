@@ -24,7 +24,7 @@
 git clone https://github.com/your-org/bluesky-crawler.git
 cd bluesky-crawler
 go mod tidy
-
+```
 📦 模块使用说明
 
 1️⃣ plc-mirror - PLC 镜像服务
